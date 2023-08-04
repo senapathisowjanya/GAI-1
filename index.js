@@ -2,10 +2,11 @@ const express = require('express');
 const cors = require('cors');
 const { Configuration, OpenAIApi } = require('openai');
 // const readlineSync = require('readline-sync');
+app.use(cors());
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
